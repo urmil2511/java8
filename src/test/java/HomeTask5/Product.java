@@ -1,4 +1,4 @@
-package HomeTask4;
+package HomeTask5;
 
 public class Product {
     String name;
