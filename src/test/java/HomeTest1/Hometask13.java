@@ -3,7 +3,7 @@ package HomeTest1;
 import lombok.extern.log4j.Log4j;
 import org.apache.log4j.BasicConfigurator;
 import org.hometask1.StringRotations;
-import org.hometask1.util;
+import org.util;
 import org.testng.annotations.Test;
 
 @Log4j

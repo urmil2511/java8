@@ -4,7 +4,7 @@ import lombok.extern.log4j.Log4j;
 import org.apache.log4j.BasicConfigurator;
 import org.hometask1.Employee;
 import org.hometask1.NameSorter;
-import org.hometask1.util;
+import org.util;
 import org.testng.annotations.Test;
 import java.util.Set;
 import java.util.TreeSet;

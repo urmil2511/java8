@@ -1,0 +1,1 @@
+{name='laptop', price=25500, category='electronics', grade='b'}
