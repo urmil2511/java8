@@ -1,4 +1,4 @@
-package HomeTask7;
+package org.HomeTask7;
 interface emp
 {
     public Employee get(String name,String account, int salary);
