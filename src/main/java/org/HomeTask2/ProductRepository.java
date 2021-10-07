@@ -1,9 +1,11 @@
 package org.HomeTask2;
 
+import org.HomeTask8.Product;
+import org.HomeTask8.Response;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class ProductRepository {
 

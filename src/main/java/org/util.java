@@ -1,8 +1,8 @@
 package org;
 
 import lombok.extern.log4j.Log4j;
-import org.HomeTask2.Product;
-import org.HomeTask2.Response;
+import org.HomeTask8.Product;
+import org.HomeTask8.Response;
 import org.hometask1.Employee;
 import org.hometask1.Palindrome;
 import org.hometask1.StringRotations;
@@ -12,7 +12,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 import java.util.function.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import static java.lang.System.*;
 
 @Log4j
 public class util implements Palindrome, StringRotations {
@@ -123,7 +126,7 @@ public class util implements Palindrome, StringRotations {
     }
 
     public static void printToMedium(org.HomeTask4.Product product, String medium) {
-        Consumer<org.HomeTask4.Product> productConsumer = s -> System.out.println(s);
+        Consumer<org.HomeTask4.Product> productConsumer = s -> out.println(s);
         Consumer<org.HomeTask4.Product> productConsumer1 = s -> {
             FileWriter writer = null;
             try {
@@ -208,9 +211,27 @@ public boolean checkPrimeNumber(int num)
 
     return flag;
 }
+    public List<Product> getListOfProductsGreaterThanThousand(List<Product> products, int priceCondition) {
+        return products.stream().filter(prd -> prd.getPrice() > priceCondition).collect(Collectors.toList());
+    }
 
+    public List<Product> getListOfProductsFromElectronicsCategory(List<Product> products, String category) {
+        return products.stream().filter(prd -> prd.getCategory().equalsIgnoreCase(category))
+                .collect(Collectors.toList());
+    }
 
+    public void printListOfProductsFromElectronicsCategoryAndPrice(List<Product> products, String category,
+                                                                   int price) {
+        products.stream().filter(prd -> prd.getCategory().equalsIgnoreCase(category) && prd.getPrice() > price)
+                .map(prd -> {
+                    prd.setName(prd.getName().toUpperCase());
+                    return prd;
+                }).forEach(out::println);
+    }
 
+    public int getCountOfProductsFromElectronicsCategory(List<Product> products, String category) {
+        return (int) products.stream().filter(prd -> prd.getCategory().equalsIgnoreCase(category)).count();
+    }
 
 
 }

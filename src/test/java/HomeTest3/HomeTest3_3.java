@@ -1,7 +1,7 @@
 package HomeTest3;
 
 import lombok.extern.log4j.Log4j;
-import org.HomeTask2.Product;
+import org.HomeTask8.Product;
 import org.HomeTask2.ProductRepository;
 import org.apache.log4j.BasicConfigurator;
 import org.testng.annotations.Test;

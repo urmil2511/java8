@@ -1,10 +1,15 @@
 package org.HomeTask7;
 
+import lombok.Data;
+
+
 public class Employee {
-    String name;
-    String account;
-    int salary;
-    public Employee(String name,String account, int salary)
+    public String name;
+    public String account;
+    public int salary;
+
+
+   public Employee(String name, String account, int salary)
     {
         this.name=name;
         this.account=account;

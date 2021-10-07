@@ -1,7 +1,6 @@
 package HomeTest5;
 
 import lombok.extern.log4j.Log4j;
-import org.HomeTask2.Product;
 import org.apache.log4j.BasicConfigurator;
 import org.testng.annotations.Test;
 import org.util;
